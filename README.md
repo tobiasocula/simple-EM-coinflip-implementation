@@ -1,3 +1,7 @@
+### Expected Maximalization algorithm
+
+Simple implementation of the EM-algorithm, applied to a coinflip-game scenario.
+
 The goal is, given an array of trials where two dice with a bias $p$ towards landing on heads have been thrown a fixed amount of time per dice, to estimate the bias values of the two dice $p_A$ and $p_B$, given only the head and tail counts per throw, but not knowing which dice has generated which trial. In this case, the hidden variables are the fact that the algorithm doesn't know which dice has generated which trial, and the parameters to be estimated are the biases of the two coins. Specifically for this implementation, these are the steps the algorithm takes:  
 -First, choose an initial guess for the biases, here given by $p_A=p_B=0.5$.  
 -For the E-step, we give an estimate of the probability of coin A or B having thrown each trial, this is given by, for both coins:  
